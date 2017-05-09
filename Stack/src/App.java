@@ -1,13 +1,13 @@
 
 public class App {
 	
-	 /*	studnr.	naam			leeftijd	geslacht
+	/*	studnr.	naam			leeftijd	geslacht
 		01		Janice			25			v
 		02 		Kermit 			18 			m
 		03 		Gonzo 			8 			m
 		04 		Swedish Chef 	35 			m
 		05	 	Miss Piggy 		28 			v
-	 */
+	*/
 	
 	/*
 	• pop()
