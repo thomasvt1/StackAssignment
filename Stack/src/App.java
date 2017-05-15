@@ -5,7 +5,7 @@ public class App {
 		01		Janice			25			v
 		02 		Kermit 			18 			m
 		03 		Gonzo 			8 			m
-		04 		Swedish Chef 	35 			m
+		04 		Swedish Chef	35 			m
 		05	 	Miss Piggy 		28 			v
 	*/
 	
@@ -34,6 +34,22 @@ public class App {
 		
 		stack.printWomen();
 		
+		fillStack(stack);
+		
+		System.out.println("~ ~ ~ PRINTING MEN ~ ~ ~");
+		stack.printMen();
+		
+		System.out.println("~ ~ ~ PRINTING WOMEN ~ ~ ~");
+		stack.printWomen();
+		
+		Student s2 = new Student(2, 18, "Kermit", "m");
+		
+		stack.push(s2);
+		
+		stack.printStack();
+	}
+	
+	private static void fillStack(Stack stack) {
 		Student s1 = new Student(1, 25, "Janice", "v");
 		Student s2 = new Student(2, 18, "Kermit", "m");
 		Student s3 = new Student(3, 8, "Gonzo", "m");
@@ -45,15 +61,5 @@ public class App {
 		stack.push(s3);
 		stack.push(s4);
 		stack.push(s5);
-		
-		System.out.println("~ ~ ~ PRINTING MEN ~ ~ ~");
-		stack.printMen();
-		
-		System.out.println("~ ~ ~ PRINTING WOMEN ~ ~ ~");
-		stack.printWomen();
-		
-		stack.push(s2);
-		
-		stack.printStack();
 	}
 }
