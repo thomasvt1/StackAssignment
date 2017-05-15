@@ -12,10 +12,12 @@ public class Stack {
 		}
 		
 		Student last = start;
+		
 		while (last.getNext() != null) {
 			last = last.getNext();
 		}
-		System.out.println("Got studid as last id: " + last.getStudentnummer());
+		
+		//System.out.println("Got studid as last id: " + last.getStudentnummer());
 		last.setNext(s);
 	}
 	
@@ -60,7 +62,7 @@ public class Stack {
 	public void printStack() {
 		Student next = start;
 		
-		while (next != null) {
+		for (int i = 0; i < size; i++) {
 			next.printStudent();
 			
 			next = next.getNext();
@@ -70,7 +72,7 @@ public class Stack {
 	public void printMen() {
 		Student next = start;
 		
-		while (next != null) {
+		for (int i = 0; i < size; i++) {
 			if (next.getGeslacht().equalsIgnoreCase("M"))
 				next.printStudent();
 			
@@ -81,7 +83,7 @@ public class Stack {
 	public void printWomen() {
 		Student next = start;
 		
-		while (next != null) {
+		for (int i = 0; i < size; i++) {
 			if (next.getGeslacht().equalsIgnoreCase("V"))
 				next.printStudent();
 			

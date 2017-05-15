@@ -25,16 +25,26 @@ public class App {
 		
 		Student pop = stack.pop();
 		
-		stack.printStack();
+		if (pop == null)
+			System.out.println("pop succesvol aangezien er nog niks op de stack zit!");
+		else
+			System.out.println("Er is iets misgegaan met het programmeren van deze opdracht :(");
 		
+		stack.printStack();
 		
 		stack.printWomen();
 		
-		stack.push(new Student(1, 25, "Janice", "v"));
-		stack.push(new Student(2, 18, "Kermit", "m"));
-		stack.push(new Student(3, 8, "Gonzo", "m"));
-		stack.push(new Student(4, 35, "Swedish Chef", "m"));
-		stack.push(new Student(5, 28, "Miss Piggy", "v"));
+		Student s1 = new Student(1, 25, "Janice", "v");
+		Student s2 = new Student(2, 18, "Kermit", "m");
+		Student s3 = new Student(3, 8, "Gonzo", "m");
+		Student s4 = new Student(4, 35, "Swedish Chef", "m");
+		Student s5 = new Student(5, 28, "Miss Piggy", "v");
+		
+		stack.push(s1);
+		stack.push(s2);
+		stack.push(s3);
+		stack.push(s4);
+		stack.push(s5);
 		
 		System.out.println("~ ~ ~ PRINTING MEN ~ ~ ~");
 		stack.printMen();
@@ -42,7 +52,7 @@ public class App {
 		System.out.println("~ ~ ~ PRINTING WOMEN ~ ~ ~");
 		stack.printWomen();
 		
-		stack.push(new Student(2, 18, "Kermit", "m"));
+		stack.push(s2);
 		
 		stack.printStack();
 	}
